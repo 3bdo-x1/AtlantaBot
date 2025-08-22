@@ -47,10 +47,10 @@ const init = async () => {
 		delete require.cache[require.resolve(`./events/${file}`)];
 	});
     
-	client.login(client.config.token); // Log in to the discord api
+	client.login("MTMzMjA1NDY2ODAyNDc0MTk2MQ.GST_3w.3N-8riH3jsQPo2Jtv4XQ4hK62HE5gZkB6Fdbdo"); // Log in to the discord api
 
 	// connect to mongoose database
-	mongoose.connect(client.config.mongoDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+	mongoose.connect("mongodb+srv://axo:axoop@cluster0.imckmpc.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
 		client.logger.log("Connected to the Mongodb database.", "log");
 	}).catch((err) => {
 		client.logger.log("Unable to connect to the Mongodb database. Error:"+err, "error");
